@@ -4,11 +4,22 @@
 public class RealNumber extends Number {
     // зачем iy тут?
     // кстати, не забывай про CamelCase.
-    private Double rx;
+    public Double rx;
+    RealNumber(Double a) {
+        rx = a;
+    }
+
+    public Double getRx(){
+        return rx;
+    }
+
+    public void setRx(Double rx) {
+        this.rx = rx;
+    }
 
     @Override
-    public void addition(Number a, Number b) {
-        int add = a.getX(a) + b.getX(b);
+    public Number addition(RealNumber a, RealNumber b) {
+        double add = a.rx + b.rx;
         System.out.println("The result of addition is " + add);
 
     }
@@ -20,7 +31,7 @@ public class RealNumber extends Number {
     }
 
     @Override
-    public void multiplication(Number a, Number b) {
+    public void multiplication(RealNumber a, RealNumber b) {
         int add = a.getX(a) * b.getX(b);
         System.out.println("The result of substruction is " + add);
     }
